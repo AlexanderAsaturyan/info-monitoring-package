@@ -1,0 +1,10 @@
+{
+  "name": "com.alexanderasaturyan.infomonitoring",
+  "version": "1.0.0",
+  "displayName": "Info Monitoring",
+  "description": "A Unity package for monitoring battery and network status on Android and iOS platforms. Includes customizable events for reporting and filtering updates",
+  "author": {
+    "name": "Alexander Asaturyan",
+    "email": "alexanderasaturyan@gmail.com"
+  }
+}

@@ -38,9 +38,9 @@ public class BatteryMonitor {
                 case BatteryManager.BATTERY_STATUS_FULL:
                     return "Full";
                 case BatteryManager.BATTERY_STATUS_DISCHARGING:
-                    return "DischargingGGbb";
+                    return "Discharging";
                 case BatteryManager.BATTERY_STATUS_NOT_CHARGING:
-                    return "Not ChargingGGbb";
+                    return "Not Charging";
                 default:
                     return "Unknown";
             }
@@ -60,7 +60,7 @@ public class BatteryMonitor {
                         case BatteryManager.BATTERY_PLUGGED_USB:
                             return "USB";
                         case BatteryManager.BATTERY_PLUGGED_AC:
-                            return "ACCC";
+                            return "AC";
                         case BatteryManager.BATTERY_PLUGGED_WIRELESS:
                             return "Wireless";
                         default:

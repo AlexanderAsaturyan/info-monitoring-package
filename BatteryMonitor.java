@@ -24,7 +24,7 @@ public class BatteryMonitor {
         }
         return -1; 
     }
-    kkkkk
+    
     public String getBatteryChargeState() {
         IntentFilter intentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         Intent batteryStatus = context.registerReceiver(null, intentFilter);

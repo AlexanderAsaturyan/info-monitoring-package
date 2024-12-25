@@ -9,7 +9,7 @@ namespace DefaultNamespace
         public static InfoMonitoringManager Instance { get; private set; }
 
         // Events for battery and network updates
-        public event Action<string> OnInfoUpdate;
+        public event Action<string> OnInfoMonitorEvent;
 
         private void Awake()
         {
@@ -54,7 +54,7 @@ namespace DefaultNamespace
         /// <param name="jsonData">JSON string containing update data.</param>
         public void OnNativeInfoUpdate(string jsonData)
         {
-            OnInfoUpdate?.Invoke(jsonData);  //OnInfoMonitorEvent
+            OnInfoMonitorEvent?.Invoke(jsonData);  //OnInfoMonitorEvent
         }
     }
 }

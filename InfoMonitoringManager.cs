@@ -30,7 +30,7 @@ namespace DefaultNamespace
         /// <summary>
         /// Initializes monitoring on the platform.
         /// </summary>
-        private void InitializeMonitoring()
+        public void InitializeMonitoring()
         {
 #if UNITY_ANDROID
             try

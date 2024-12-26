@@ -7,7 +7,7 @@ namespace DefaultNamespace
 
     public class BatteryData : BaseData
     {
-        public override string Category = "Battery";
+        // public override string Category = "Battery";
         public int Level;
         public string Type;
         public string State;

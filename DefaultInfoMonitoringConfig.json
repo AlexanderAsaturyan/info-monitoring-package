@@ -1,0 +1,7 @@
+{
+  "name": "battery",
+  "enabled": true,
+  "level": 0,
+  "chargeState": null,
+  "chargeMode": null
+}

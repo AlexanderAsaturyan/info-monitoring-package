@@ -1,5 +1,6 @@
 using System;
 using InfoMonitoringNamespace.Battery;
+using InfoMonitoringNamespace.Notifications;
 using UnityEngine;
 
 namespace InfoMonitoringNamespace
@@ -17,6 +18,7 @@ namespace InfoMonitoringNamespace
         public event Action<BaseData> InfoUpdated;
 
         private BatteryManager _batteryManager;
+        private NotificationsManager _notificationsManager;
 
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
@@ -57,6 +59,12 @@ namespace InfoMonitoringNamespace
                 _batteryManager = new BatteryManager(infoMonitoringConfig.batteryConfig);
                 _batteryManager.StartBatteryChecks();
             }
+            
+            if (infoMonitoringConfig.notificationConfig.TrackEnabled)
+            {
+                _notificationsManager = new NotificationsManager(infoMonitoringConfig.notificationConfig);
+                _notificationsManager.StartNotificationsCheck();
+            }
         }
 
         private void OnEnable()
@@ -64,6 +72,11 @@ namespace InfoMonitoringNamespace
             if (_batteryManager != null)
             {
                 _batteryManager.OnBatteryDataUpdated += OnAnyDataChanged;
+            }
+            
+            if (_notificationsManager != null)
+            {
+                _notificationsManager.OnNotificationsDataUpdated += OnAnyDataChanged;
             }
         }
 
@@ -73,6 +86,11 @@ namespace InfoMonitoringNamespace
             {
                 _batteryManager.OnBatteryDataUpdated -= OnAnyDataChanged;
                 _batteryManager.StopBatteryChecks();
+            }
+            
+            if (_notificationsManager != null)
+            {
+                _notificationsManager.OnNotificationsDataUpdated -= OnAnyDataChanged;
             }
         }
 

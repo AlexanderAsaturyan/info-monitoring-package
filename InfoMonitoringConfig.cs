@@ -7,6 +7,7 @@ namespace InfoMonitoringNamespace
     public class InfoMonitoringConfig : ScriptableObject
     {
         public BatteryConfig batteryConfig;
+        public NotificationConfig notificationConfig;
     }
    
     [Serializable]
@@ -14,5 +15,11 @@ namespace InfoMonitoringNamespace
     {
         public bool TrackEnabled = true;
         public int ReportLevel = 2;
+    }
+
+    Serializable]
+    public class NotificationConfig 
+    {
+        public bool TrackEnabled = true;
     }
 }

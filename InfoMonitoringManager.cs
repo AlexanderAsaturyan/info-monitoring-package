@@ -91,6 +91,7 @@ namespace InfoMonitoringNamespace
             if (_notificationsManager != null)
             {
                 _notificationsManager.OnNotificationsDataUpdated -= OnAnyDataChanged;
+                _notificationsManager.StopNotificationCheck();
             }
         }
 

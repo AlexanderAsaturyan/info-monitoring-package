@@ -17,7 +17,7 @@ namespace InfoMonitoringNamespace
         public int ReportLevel = 2;
     }
 
-    Serializable]
+    [Serializable]
     public class NotificationConfig 
     {
         public bool TrackEnabled = true;
